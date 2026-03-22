@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <!-- スマホでもPCでもプレビューと同じ1100px幅に完全固定する設定 -->
-  <meta name="viewport" content="width=1100">
+  <!-- スマホ・PC共通でプレビュー画面の幅(1024px)に完全固定 -->
+  <meta name="viewport" content="width=1024">
   <title>Style Archive | Executive Personal Styling</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -15,50 +15,20 @@
     body { font-family: sans-serif; }
     .font-serif { font-family: 'Noto Serif JP', serif; }
     
-    /* --- 全端末でプレビュー画面の配置を完全に固定する設定 --- */
-    html { background-color: #f5f5f4; }
+    /* PCでもスマホでもプレビューそのままの見え方にするための固定設定 */
     body {
-      min-width: 1100px !important;
-      max-width: 1100px !important;
+      width: 1024px !important;
       margin: 0 auto !important;
-      background-color: white;
-      box-shadow: 0 0 50px rgba(0,0,0,0.05); /* 両端にうっすら影をつける */
-    }
-    
-    /* --- 印刷設定 --- */
-    @media print {
-      @page {
-        size: A4 portrait;
-        margin: 0; /* ブラウザが勝手に入れるヘッダー(日付など)を消す */
-      }
-      html, body {
-        width: 100%;
-        height: auto !important;
-        overflow: visible !important;
-        /* 背景色やグラフィックを強制的に出力させる */
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        background-color: #ffffff !important;
-      }
-      /* 固定ナビゲーションや不要な要素は印刷時に消す */
-      nav, .no-print {
-        display: none !important;
-      }
-      /* 背景の縦ラインの位置ズレを防ぐ */
-      .fixed { position: absolute !important; }
-      /* 各セクションがページの途中で不自然に切れないようにする */
-      section {
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
-      }
+      background-color: white !important;
+      overflow-x: hidden;
     }
   </style>
 </head>
 <body class="min-h-screen bg-white font-sans text-stone-800 selection:bg-stone-200 selection:text-stone-900 relative">
   
   <!-- Navigation -->
-  <!-- 固定幅(1100px)に合わせてナビゲーションも中央に固定 -->
-  <nav class="fixed w-[1100px] left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md z-50 border-b-[0.5px] border-stone-200 transition-all duration-500">
+  <!-- サイト幅(1024px)に合わせてナビゲーションも固定 -->
+  <nav class="fixed w-[1024px] bg-white/90 backdrop-blur-md z-50 border-b-[0.5px] border-stone-200 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex justify-between items-center h-24">
         <div class="flex-shrink-0">
@@ -85,13 +55,13 @@
       <h1 class="font-serif font-light tracking-widest text-center text-stone-900 mb-8 leading-[1.8]">
         <span class="block text-xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-stone-800 tracking-[0.2em]">“似合う”ではなく、</span>
         <span class="block flex items-center justify-center whitespace-nowrap text-3xl md:text-5xl lg:text-6xl tracking-[0.1em]">
-          “<span data-grad-text="true" class="text-5xl md:text-7xl lg:text-8xl font-medium px-2 mx-1" style="background: linear-gradient(to bottom, #c5a059, #a37c35, #8a6c28); -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 0.1em;">格</span>”を上げるスタイリング
+          “<span class="text-5xl md:text-7xl lg:text-8xl font-medium px-2 mx-1" style="background: linear-gradient(to bottom, #c5a059, #a37c35, #8a6c28); -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 0.1em;">格</span>”を上げるスタイリング
         </span>
       </h1>
       
       <div class="w-full max-w-xl mx-auto mb-16 relative py-4">
         <div class="absolute top-0 left-0 w-full h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent opacity-80"></div>
-        <p data-grad-text="true" class="text-stone-800 text-xs md:text-sm tracking-[0.4em] uppercase font-serif text-center" style="background: linear-gradient(to right, #6b5a35, #bfa75d, #6b5a35); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <p class="text-stone-800 text-xs md:text-sm tracking-[0.4em] uppercase font-serif text-center" style="background: linear-gradient(to right, #6b5a35, #bfa75d, #6b5a35); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
           STYLING / SHOPPING ATTENDANT
         </p>
         <div class="absolute bottom-0 left-0 w-full h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent opacity-80"></div>
@@ -113,7 +83,7 @@
         </p>
       </div>
       
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 px-6 md:px-0 text-center no-print">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 px-6 md:px-0 text-center">
         <div class="bg-gradient-to-br from-[#4a3f24] to-[#262011] text-[#e8dcb3] px-14 py-6 text-sm tracking-[0.4em] uppercase w-full sm:w-auto font-bold shadow-xl shadow-[#4a3f24]/20 border border-[#8c7a4b]/30">
           完全紹介制
         </div>
@@ -202,7 +172,7 @@
       </div>
 
       <!-- STEP 1. ONLINE STYLING -->
-      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8">
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8 mb-48">
         <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">01</div>
         <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
           <div class="lg:w-1/2 w-full lg:pr-4">
@@ -239,10 +209,8 @@
         </div>
       </div>
 
-      <div class="w-full max-w-2xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent my-48 opacity-50"></div>
-
       <!-- STEP 2. SHOPPING SESSION -->
-      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8">
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8 mb-48">
         <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">02</div>
         <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
           <div class="lg:w-1/2 w-full lg:pr-4">
@@ -287,10 +255,8 @@
         </div>
       </div>
 
-      <div class="w-full max-w-2xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent my-48 opacity-50"></div>
-
       <!-- STEP 3. Closet Audit -->
-      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8">
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8 mb-48">
          <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">03</div>
          <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
             <div class="lg:w-1/2 w-full lg:pr-4">
@@ -329,79 +295,54 @@
           </div>
       </div>
 
-      <div class="w-full max-w-2xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent my-48 opacity-50"></div>
-
       <!-- STEP 4. Annual VIP -->
       <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8 mb-32">
         <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">04</div>
         <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
           <div class="lg:w-1/2 w-full lg:pr-4">
-            
-            <div class="text-[#bfa75d] uppercase mb-12 flex flex-col items-start font-serif font-light">
-              <div class="flex items-baseline mb-6">
-                <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 4.</span>
-                <span class="text-xl md:text-2xl tracking-[0.2em] leading-snug">PRIVATE SUPPORT</span>
-              </div>
-              <span class="text-xs tracking-widest px-3 py-1 border-[0.5px] border-[#bfa75d]">Executive Exclusive</span>
+            <div class="text-[#bfa75d] uppercase mb-12 flex items-baseline font-serif font-light">
+              <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 4.</span>
+              <span class="text-xl md:text-2xl tracking-[0.2em]">PRIVATE SUPPORT</span>
+              <span class="ml-4 text-[10px] tracking-widest px-2 py-1 border-[0.5px] border-[#bfa75d] text-[#bfa75d] font-bold">VIP</span>
             </div>
             
             <p class="text-3xl md:text-4xl font-serif tracking-[0.1em] mb-14 text-stone-900 font-light leading-[1.8]">
               印象戦略パートナー<br>
-              <span class="text-lg text-stone-500 tracking-[0.1em] block mt-8 font-serif leading-normal">Annual Styling Service</span>
+              <span class="text-lg text-stone-500 tracking-[0.1em] block mt-8 font-serif leading-normal">【専属スタイリング】</span>
             </p>
             
-            <div class="w-12 h-[0.5px] bg-[#bfa75d] mb-12"></div>
+            <p class="text-stone-500 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
+              装いに関する意思決定を、<br>
+              継続的に支えるパートナーとして<br>
+              年間を通じてワードローブと印象戦略をトータル管理します
+            </p>
             
-            <div class="bg-stone-900/95 backdrop-blur-md border-[0.5px] border-stone-700 p-10 lg:p-12 shadow-2xl relative overflow-hidden text-white">
-              <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none overflow-hidden text-center">
-                <div class="absolute top-0 right-0 w-0 h-0 border-t-[90px] border-t-[#bfa75d] border-l-[90px] border-l-transparent"></div>
-                <span class="absolute top-[18px] right-[4px] text-white text-[10px] font-bold tracking-[0.15em] transform rotate-45 block w-14 text-center">VIP</span>
-              </div>
-
-              <p class="text-xl md:text-2xl text-white tracking-widest mb-6 font-serif font-bold">年間契約｜専属スタイリング</p>
-              
-              <p class="text-stone-300 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
-                装いに関する意思決定を、<br>
-                継続的に支えるパートナーとして
-              </p>
-
-              <div class="text-right border-b-[0.5px] border-stone-700 pb-8 mb-8">
-                <p class="text-3xl md:text-4xl font-serif text-white tracking-widest">
-                  ¥880,000 <span class="text-base font-sans text-stone-400 tracking-normal ml-2 font-light">/ 年</span>
-                </p>
-                <p class="text-stone-400 text-sm tracking-widest mt-3 font-light">（月額換算：約¥73,000）</p>
-              </div>
-
-              <ul class="space-y-6 text-base lg:text-lg text-stone-200 font-light tracking-[0.1em]">
-                <li>・ワードローブ戦略設計・管理</li>
-                <li>・シーン別スタイリング設計</li>
-                <li>・ショッピングアテンド</li>
-                <li>・印象ブランディングの継続的最適化</li>
-              </ul>
-              
-              <div class="my-8 flex justify-center">
-                <div class="flex items-center justify-center w-8 h-8 rounded-full border-[0.5px] border-[#bfa75d] text-[#bfa75d] font-light">+</div>
-              </div>
-              
-              <ul class="space-y-6 text-base lg:text-lg text-[#bfa75d] font-light tracking-[0.1em]">
-                <li>・専用LINEコンシェルジュ</li>
-                <li>・デジタルワードローブ管理</li>
-              </ul>
+            <div class="text-right text-stone-900 text-2xl md:text-3xl font-serif tracking-widest mt-16">
+              ¥880,000 <span class="text-sm font-sans tracking-normal text-stone-500 ml-2 font-light">(+tax) / 年</span>
             </div>
           </div>
           
-          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 pointer-events-none overflow-hidden text-center">
-              <div class="absolute top-0 right-0 w-0 h-0 border-t-[128px] border-t-[#bfa75d] border-l-[128px] border-l-transparent"></div>
-              <span class="absolute top-[28px] right-[2px] text-white text-[11px] font-bold tracking-[0.15em] transform rotate-45 block w-24 text-center">VIP</span>
+          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-stone-900 p-12 lg:p-16 border-[0.5px] border-stone-700 shadow-2xl relative overflow-hidden text-white">
+            <div class="absolute top-0 right-0 w-28 h-28 pointer-events-none overflow-hidden text-center">
+              <div class="absolute top-0 right-0 w-0 h-0 border-t-[112px] border-t-[#bfa75d] border-l-[112px] border-l-transparent"></div>
+              <span class="absolute top-[24px] right-[2px] text-white text-[11px] font-bold tracking-[0.15em] transform rotate-45 block w-20 text-center">VIP</span>
             </div>
 
-            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
-            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-400 ml-2 font-normal">/ 得られる変化</span></h4>
+            <ul class="space-y-8 text-base lg:text-lg text-stone-200 font-light tracking-[0.1em]">
               <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの無駄がなくなる</span></li>
               <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>日々の選択がスムーズになる</span></li>
               <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが戦略的に機能する</span></li>
             </ul>
+            
+            <div class="mt-12 pt-8 border-t-[0.5px] border-stone-700">
+              <p class="text-[#bfa75d] text-sm tracking-[0.2em] font-bold mb-6 font-serif uppercase">Included Services</p>
+              <ul class="space-y-4 text-sm text-stone-400 font-light tracking-[0.1em]">
+                <li>・ワードローブ戦略設計・管理</li>
+                <li>・シーン別スタイリング設計</li>
+                <li>・専用LINEコンシェルジュ</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -517,7 +458,7 @@
         <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
           <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
             <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">20 YEARS IN FASHION</h4>
-            <div data-grad-text="true" class="mb-5 flex items-baseline justify-center h-16" style="background: linear-gradient(to bottom, #d4af37, #b6892b, #7a5c1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            <div class="mb-5 flex items-baseline justify-center h-16" style="background: linear-gradient(to bottom, #d4af37, #b6892b, #7a5c1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
               <span class="text-7xl font-serif tracking-tighter leading-none">20</span>
               <span class="text-base ml-1 font-serif font-bold">年</span>
             </div>
@@ -555,7 +496,7 @@
       
       <div class="w-full max-w-lg mx-auto h-[1px] bg-[#bfa75d] opacity-70 mb-12"></div>
       
-      <p data-grad-text="true" class="text-sm md:text-base font-serif tracking-[0.15em] mb-20" style="background: linear-gradient(to right, #c5a059, #a37c35, #8a6c28); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      <p class="text-sm md:text-base font-serif tracking-[0.15em] mb-20" style="background: linear-gradient(to right, #c5a059, #a37c35, #8a6c28); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
         Private Styling Service
       </p>
     </div>
