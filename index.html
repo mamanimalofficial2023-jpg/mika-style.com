@@ -190,13 +190,16 @@
             </div>
           </div>
           
-          <div class="lg:w-1/2 w-full bg-white border-[0.5px] border-stone-200 p-12 lg:p-16 shadow-lg">
-            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
-            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>自分に最適なスタイルが明確になる</span></li>
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの判断基準ができる</span></li>
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>迷いのない服選びができる</span></li>
-            </ul>
+          <!-- 全てのRESULTSボックスに固定高さ（h-[440px] lg:h-[480px]）を適用し、中身をフレックスで中央配置 -->
+          <div class="lg:w-1/2 w-full bg-white border-[0.5px] border-stone-200 p-12 lg:p-16 shadow-lg h-[440px] lg:h-[480px] flex flex-col">
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold shrink-0">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <div class="flex-grow flex flex-col justify-center">
+              <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>自分に最適なスタイルが明確になる</span></li>
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの判断基準ができる</span></li>
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>迷いのない服選びができる</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -236,13 +239,16 @@
             </div>
           </div>
           
-          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg">
-            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
-            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>最適なアイテムが即座に揃う</span></li>
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>無駄な購買がなくなる</span></li>
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>短時間で完成度の高い装いが整う</span></li>
-            </ul>
+          <!-- STEP 1と同じ固定高さを適用 -->
+          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg h-[440px] lg:h-[480px] flex flex-col">
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold shrink-0">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <div class="flex-grow flex flex-col justify-center">
+              <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>最適なアイテムが即座に揃う</span></li>
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>無駄な購買がなくなる</span></li>
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>短時間で完成度の高い装いが整う</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -275,14 +281,17 @@
               </div>
             </div>
             
-            <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg">
-               <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
-               <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
-                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>服選びの時間が減る</span></li>
-                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが整う</span></li>
-                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>無駄な買い物が減る</span></li>
-                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>洗練された印象になる</span></li>
-               </ul>
+            <!-- STEP 1と同じ固定高さを適用 -->
+            <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg h-[440px] lg:h-[480px] flex flex-col">
+               <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold shrink-0">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+               <div class="flex-grow flex flex-col justify-center">
+                 <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+                   <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>服選びの時間が減る</span></li>
+                   <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが整う</span></li>
+                   <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>無駄な買い物が減る</span></li>
+                   <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>洗練された印象になる</span></li>
+                 </ul>
+               </div>
             </div>
           </div>
       </div>
@@ -346,20 +355,22 @@
             </div>
           </div>
           
-          <!-- 右側のRESULTSはSTEP1〜3と同じ白背景に -->
-          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg relative overflow-hidden">
+          <!-- STEP 1と同じ固定高さを適用 -->
+          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg relative overflow-hidden h-[440px] lg:h-[480px] flex flex-col">
             <!-- 白背景に映える黒×金のリボン -->
             <div class="absolute top-0 right-0 w-28 h-28 pointer-events-none overflow-hidden text-center">
               <div class="absolute top-0 right-0 w-0 h-0 border-t-[112px] border-t-stone-900 border-l-[112px] border-l-transparent"></div>
               <span class="absolute top-[24px] right-[2px] text-[#bfa75d] text-[11px] font-bold tracking-[0.15em] transform rotate-45 block w-20 text-center">VIP</span>
             </div>
 
-            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
-            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの無駄がなくなる</span></li>
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>日々の選択がスムーズになる</span></li>
-              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが戦略的に機能する</span></li>
-            </ul>
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold shrink-0 relative z-10">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <div class="flex-grow flex flex-col justify-center relative z-10">
+              <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの無駄がなくなる</span></li>
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>日々の選択がスムーズになる</span></li>
+                <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが戦略的に機能する</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
