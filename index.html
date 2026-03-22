@@ -1,1 +1,616 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Archive | Executive Personal Styling</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- 直接PDFを生成・ダウンロードするためのライブラリ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: sans-serif; }
+    .font-serif { font-family: 'Noto Serif JP', serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-white font-sans text-stone-800 selection:bg-stone-200 selection:text-stone-900 relative">
+  
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b-[0.5px] border-stone-200 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-24">
+        <div class="flex-shrink-0">
+          <span class="font-serif text-2xl tracking-[0.3em] text-stone-900 uppercase font-bold">Style Archive</span>
+        </div>
+        <div class="hidden md:flex space-x-10 text-sm tracking-[0.2em] uppercase text-stone-500 font-bold">
+          <a href="#concept" class="hover:text-[#bfa75d] transition-colors duration-500">Concept</a>
+          <a href="#services" class="hover:text-[#bfa75d] transition-colors duration-500">Services</a>
+          <a href="#profile" class="hover:text-[#bfa75d] transition-colors duration-500">WHY ME</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-40 pb-32 lg:pt-56 lg:pb-48 bg-stone-50 flex flex-col items-center justify-center text-center border-b-[0.5px] border-stone-200 overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-[#bfa75d]/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 w-full">
+      <p class="text-[#bfa75d] text-sm md:text-base tracking-[0.5em] uppercase font-serif mb-8 font-bold">
+        Executive Personal Styling
+      </p>
+      <div class="w-[1px] h-12 bg-[#bfa75d]/50 mx-auto mb-10"></div>
+      
+      <h1 class="font-serif font-light tracking-widest text-center text-stone-900 mb-8 leading-[1.8]">
+        <span class="block text-xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-stone-800 tracking-[0.2em]">“似合う”ではなく、</span>
+        <span class="block flex items-center justify-center whitespace-nowrap text-3xl md:text-5xl lg:text-6xl tracking-[0.1em]">
+          “<span data-grad-text="true" class="text-5xl md:text-7xl lg:text-8xl font-medium px-2 mx-1" style="background: linear-gradient(to bottom, #c5a059, #a37c35, #8a6c28); -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 0.1em;">格</span>”を上げるスタイリング
+        </span>
+      </h1>
+      
+      <div class="w-full max-w-xl mx-auto mb-16 relative py-4">
+        <div class="absolute top-0 left-0 w-full h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent opacity-80"></div>
+        <p data-grad-text="true" class="text-stone-800 text-xs md:text-sm tracking-[0.4em] uppercase font-serif text-center" style="background: linear-gradient(to right, #6b5a35, #bfa75d, #6b5a35); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          STYLING / SHOPPING ATTENDANT
+        </p>
+        <div class="absolute bottom-0 left-0 w-full h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent opacity-80"></div>
+      </div>
+      
+      <div class="w-full flex justify-center mb-16 px-4 md:px-0">
+        <p class="text-lg md:text-xl text-stone-500 leading-[2.4] font-light tracking-[0.1em] text-center">
+          装いは、単なる見た目ではなく<br>
+          印象や信頼を形づくるもの<br>
+          <br>
+          第一印象は、その後の評価や機会にも影響します<br>
+          <br>
+          装いに関する意思決定を支え、<br>
+          無駄な迷いを減らしながら、<br>
+          常に整った状態へ<br>
+          <br>
+          似合うを軸に、<br>
+          その先の“格”まで整えるスタイリングを
+        </p>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 px-6 md:px-0 text-center no-print">
+        <div class="bg-gradient-to-br from-[#4a3f24] to-[#262011] text-[#e8dcb3] px-14 py-6 text-sm tracking-[0.4em] uppercase w-full sm:w-auto font-bold shadow-xl shadow-[#4a3f24]/20 border border-[#8c7a4b]/30">
+          完全紹介制
+        </div>
+        <span class="text-sm tracking-[0.4em] text-stone-400 uppercase font-serif font-bold">Reserved Service</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept Section -->
+  <section id="concept" class="py-48 lg:py-64 bg-white relative z-10">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+      <div class="border-[0.5px] border-stone-200 bg-stone-50 p-10 md:p-16 max-w-2xl mx-auto shadow-sm">
+        <h4 class="text-base md:text-lg tracking-[0.3em] text-[#bfa75d] mb-10 uppercase font-serif font-bold">
+          Inner Challenges <span class="text-stone-400 font-sans tracking-widest ml-2 font-normal text-sm">/ こんなお悩みに</span>
+        </h4>
+        <ul class="space-y-6 text-lg md:text-xl tracking-[0.15em] text-stone-600 font-light text-left mx-auto w-fit">
+          <li class="flex items-center">
+            <div class="w-2 h-[1px] bg-[#bfa75d] mr-5 shrink-0"></div>
+            <span>装いに迷う時間を減らしたい</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-2 h-[1px] bg-[#bfa75d] mr-5 shrink-0"></div>
+            <span>重要な場面で、最適な印象を保ちたい</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-2 h-[1px] bg-[#bfa75d] mr-5 shrink-0"></div>
+            <span>シーンごとに適した装いを整えたい</span>
+          </li>
+          <li class="flex items-center">
+            <div class="w-2 h-[1px] bg-[#bfa75d] mr-5 shrink-0"></div>
+            <span>自分に合う基準を明確にしたい</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Menu Section -->
+  <section id="services" class="py-32 lg:py-48 bg-stone-50 relative z-10 border-t-[0.5px] border-stone-200">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 text-left">
+      
+      <div class="text-center mb-24">
+        <span class="text-[#bfa75d] text-sm tracking-[0.4em] uppercase mb-4 block font-serif font-bold">Services</span>
+        <h2 class="text-4xl md:text-5xl font-serif font-light tracking-[0.2em] uppercase text-stone-900">
+          Our Expertise
+        </h2>
+      </div>
+
+      <!-- 4 Blocks -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-32 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-b from-white to-stone-50 p-10 border-[0.5px] border-stone-200 flex flex-col items-center justify-center text-center shadow-sm">
+          <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-8 font-bold">ONLINE STYLING</h4>
+          <div class="text-[#bfa75d] mb-8 flex items-center justify-center h-14">
+            <i data-lucide="search" class="w-12 h-12" stroke-width="1.2"></i>
+          </div>
+          <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">スタイルの方向性を明確に</p>
+        </div>
+
+        <div class="bg-gradient-to-b from-white to-stone-50 p-10 border-[0.5px] border-stone-200 flex flex-col items-center justify-center text-center shadow-sm">
+          <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-8 font-bold">SHOPPING SESSION</h4>
+          <div class="text-[#bfa75d] mb-8 flex items-center justify-center h-14">
+            <i data-lucide="briefcase" class="w-12 h-12" stroke-width="1.2"></i>
+          </div>
+          <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">最適な一着を厳選してご提案</p>
+        </div>
+
+        <div class="bg-gradient-to-b from-white to-stone-50 p-10 border-[0.5px] border-stone-200 flex flex-col items-center justify-center text-center shadow-sm">
+          <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-8 font-bold">CLOSET DIAGNOSIS</h4>
+          <div class="text-[#bfa75d] mb-8 flex items-center justify-center h-14">
+            <i data-lucide="layout-grid" class="w-12 h-12" stroke-width="1.2"></i>
+          </div>
+          <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">日常の装いと環境を最適化</p>
+        </div>
+
+        <div class="bg-gradient-to-b from-white to-stone-50 p-10 border-[0.5px] border-stone-200 flex flex-col items-center justify-center text-center shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none rounded-tr-lg overflow-hidden text-left">
+            <div class="absolute top-0 right-0 w-0 h-0 border-t-[90px] border-t-stone-900 border-l-[90px] border-l-transparent text-left"></div>
+            <span class="absolute top-[18px] right-[4px] text-[#bfa75d] text-[10px] font-bold tracking-[0.2em] transform rotate-45 block w-14 text-center text-left">VIP</span>
+          </div>
+          <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-8 font-bold">PRIVATE SUPPORT</h4>
+          <div class="text-[#bfa75d] mb-8 flex items-center justify-center h-14">
+            <i data-lucide="crown" class="w-12 h-12" stroke-width="1.2"></i>
+          </div>
+          <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">継続的な印象戦略パートナー</p>
+        </div>
+      </div>
+
+      <!-- STEP 1. ONLINE STYLING -->
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8">
+        <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">01</div>
+        <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
+          <div class="lg:w-1/2 w-full lg:pr-4">
+            <div class="text-[#bfa75d] uppercase mb-12 flex items-baseline font-serif font-light">
+              <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 1.</span>
+              <span class="text-xl md:text-2xl tracking-[0.2em]">ONLINE STYLING</span>
+            </div>
+            
+            <p class="text-3xl md:text-4xl font-serif tracking-[0.1em] mb-14 text-stone-900 font-light leading-[1.8]">
+              あなたを最も引き立てる、<br>
+              スタイルの軸を明確に<br>
+              <span class="text-lg text-stone-500 tracking-[0.1em] block mt-8 font-serif leading-normal">【オンラインスタイリング】</span>
+            </p>
+            
+            <p class="text-stone-500 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
+              体型・雰囲気・バランスを見極め、<br>
+              本質的に似合うスタイルの方向性を設計<br>
+              洗練された印象をつくる基盤を整えます
+            </p>
+            
+            <div class="text-right text-stone-900 text-2xl md:text-3xl font-serif tracking-widest mt-16">
+              ¥18,000 <span class="text-sm font-sans tracking-normal text-stone-500 ml-2 font-light">(+tax) / 60min</span>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 w-full bg-white border-[0.5px] border-stone-200 p-12 lg:p-16 shadow-lg">
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>自分に最適なスタイルが明確になる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの判断基準ができる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>迷いのない服選びができる</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-2xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent my-48 opacity-50"></div>
+
+      <!-- STEP 2. SHOPPING SESSION -->
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8">
+        <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">02</div>
+        <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
+          <div class="lg:w-1/2 w-full lg:pr-4">
+            <div class="text-[#bfa75d] uppercase mb-12 flex items-baseline font-serif font-light">
+              <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 2.</span>
+              <span class="text-xl md:text-2xl tracking-[0.2em]">SHOPPING SESSION</span>
+            </div>
+            
+            <p class="text-3xl md:text-4xl font-serif tracking-[0.1em] mb-14 text-stone-900 font-light leading-[1.8]">
+              装いを格上げする、<br>
+              最適な一着を<br>
+              <span class="text-lg text-stone-500 tracking-[0.1em] block mt-8 font-serif leading-normal">【ショッピングアテンド】</span>
+            </p>
+            
+            <p class="text-stone-500 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
+              目的・立場・シーンに応じて、<br>
+              長期的に活用できるアイテムを厳選<br>
+              その場でスタイリングを構築し、<br>
+              無駄のない購買を実現します
+            </p>
+            
+            <div class="space-y-6 mt-16">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-stone-50 p-8 border-[0.5px] border-stone-200">
+                <span class="text-stone-600 text-sm font-serif uppercase tracking-widest font-bold mb-2 sm:mb-0">BASIC (90min)</span>
+                <span class="text-2xl md:text-3xl font-serif text-stone-900 tracking-widest">¥38,000 <span class="text-sm font-sans text-stone-500 font-light tracking-normal">(+tax)</span></span>
+              </div>
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-8 border-[0.5px] border-[#bfa75d] shadow-sm">
+                <span class="text-[#bfa75d] text-sm font-serif uppercase tracking-widest font-bold mb-2 sm:mb-0">STANDARD (120min)</span>
+                <span class="text-2xl md:text-3xl font-serif text-stone-900 tracking-widest">¥48,000 <span class="text-sm font-sans text-stone-500 font-light tracking-normal">(+tax)</span></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg">
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>最適なアイテムが即座に揃う</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>無駄な購買がなくなる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>短時間で完成度の高い装いが整う</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-2xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent my-48 opacity-50"></div>
+
+      <!-- STEP 3. Closet Audit -->
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8">
+         <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">03</div>
+         <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
+            <div class="lg:w-1/2 w-full lg:pr-4">
+              <div class="text-[#bfa75d] uppercase mb-12 flex items-baseline font-serif font-light">
+                <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 3.</span>
+                <span class="text-xl md:text-2xl tracking-[0.2em]">CLOSET DIAGNOSIS</span>
+              </div>
+              
+              <p class="text-3xl md:text-4xl font-serif tracking-[0.1em] mb-14 text-stone-900 font-light leading-[1.8]">
+                ワードローブを整え、<br>
+                日常の装いを最適化する<br>
+                <span class="text-lg text-stone-500 tracking-[0.1em] block mt-8 font-serif leading-normal">【クローゼット診断】</span>
+              </p>
+              
+              <ul class="space-y-8 text-lg text-stone-500 font-light tracking-[0.1em] mb-12">
+                <li>・ ワードローブの整理・最適化</li>
+                <li>・ 似合う服 / 着ない服の仕分け</li>
+                <li>・ 手持ち服での着回し構成作成</li>
+                <li>・ 不足アイテムの明確化</li>
+              </ul>
+              
+              <div class="text-right text-stone-900 text-2xl md:text-3xl font-serif tracking-widest mt-16">
+                ¥88,000 <span class="text-sm font-sans tracking-normal text-stone-500 ml-2 font-light">(+tax) / 120min</span>
+              </div>
+            </div>
+            
+            <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg">
+               <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+               <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>服選びの時間が減る</span></li>
+                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが整う</span></li>
+                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>無駄な買い物が減る</span></li>
+                 <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>洗練された印象になる</span></li>
+               </ul>
+            </div>
+          </div>
+      </div>
+
+      <div class="w-full max-w-2xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-[#bfa75d] to-transparent my-48 opacity-50"></div>
+
+      <!-- STEP 4. Annual VIP -->
+      <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8 mb-32">
+        <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">04</div>
+        <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
+          <div class="lg:w-1/2 w-full lg:pr-4">
+            
+            <div class="text-[#bfa75d] uppercase mb-12 flex flex-col items-start font-serif font-light">
+              <div class="flex items-baseline mb-6">
+                <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 4.</span>
+                <span class="text-xl md:text-2xl tracking-[0.2em] leading-snug">PRIVATE SUPPORT</span>
+              </div>
+              <span class="text-xs tracking-widest px-3 py-1 border-[0.5px] border-[#bfa75d]">Executive Exclusive</span>
+            </div>
+            
+            <p class="text-3xl md:text-4xl font-serif tracking-[0.1em] mb-14 text-stone-900 font-light leading-[1.8]">
+              印象戦略パートナー<br>
+              <span class="text-lg text-stone-500 tracking-[0.1em] block mt-8 font-serif leading-normal">Annual Styling Service</span>
+            </p>
+            
+            <div class="w-12 h-[0.5px] bg-[#bfa75d] mb-12"></div>
+            
+            <div class="bg-stone-900/95 backdrop-blur-md border-[0.5px] border-stone-700 p-10 lg:p-12 shadow-2xl relative overflow-hidden text-white">
+              <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none overflow-hidden text-center">
+                <div class="absolute top-0 right-0 w-0 h-0 border-t-[90px] border-t-[#bfa75d] border-l-[90px] border-l-transparent"></div>
+                <span class="absolute top-[18px] right-[4px] text-white text-[10px] font-bold tracking-[0.15em] transform rotate-45 block w-14 text-center">VIP</span>
+              </div>
+
+              <p class="text-xl md:text-2xl text-white tracking-widest mb-6 font-serif font-bold">年間契約｜専属スタイリング</p>
+              
+              <p class="text-stone-300 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
+                装いに関する意思決定を、<br>
+                継続的に支えるパートナーとして
+              </p>
+
+              <div class="text-right border-b-[0.5px] border-stone-700 pb-8 mb-8">
+                <p class="text-3xl md:text-4xl font-serif text-white tracking-widest">
+                  ¥880,000 <span class="text-base font-sans text-stone-400 tracking-normal ml-2 font-light">/ 年</span>
+                </p>
+                <p class="text-stone-400 text-sm tracking-widest mt-3 font-light">（月額換算：約¥73,000）</p>
+              </div>
+
+              <ul class="space-y-6 text-base lg:text-lg text-stone-200 font-light tracking-[0.1em]">
+                <li>・ワードローブ戦略設計・管理</li>
+                <li>・シーン別スタイリング設計</li>
+                <li>・ショッピングアテンド</li>
+                <li>・印象ブランディングの継続的最適化</li>
+              </ul>
+              
+              <div class="my-8 flex justify-center">
+                <div class="flex items-center justify-center w-8 h-8 rounded-full border-[0.5px] border-[#bfa75d] text-[#bfa75d] font-light">+</div>
+              </div>
+              
+              <ul class="space-y-6 text-base lg:text-lg text-[#bfa75d] font-light tracking-[0.1em]">
+                <li>・専用LINEコンシェルジュ</li>
+                <li>・デジタルワードローブ管理</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 pointer-events-none overflow-hidden text-center">
+              <div class="absolute top-0 right-0 w-0 h-0 border-t-[128px] border-t-[#bfa75d] border-l-[128px] border-l-transparent"></div>
+              <span class="absolute top-[28px] right-[2px] text-white text-[11px] font-bold tracking-[0.15em] transform rotate-45 block w-24 text-center">VIP</span>
+            </div>
+
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの無駄がなくなる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>日々の選択がスムーズになる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが戦略的に機能する</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Profile Section (Unified WHY ME & BACKGROUND) -->
+  <section id="profile" class="py-32 lg:py-48 bg-white border-t-[0.5px] border-stone-200 relative z-10 text-left">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- WHY ME Section Header -->
+      <div class="text-center mb-24">
+        <span class="text-[#bfa75d] text-4xl md:text-5xl tracking-[0.15em] mb-8 block font-serif font-light">WHY ME</span>
+        <h2 class="text-base md:text-lg font-serif font-medium tracking-[0.15em] text-stone-800 leading-[2.2]">
+          外見は、感覚ではなく”設計”できるものです
+        </h2>
+      </div>
+
+      <!-- Experience & Background Title -->
+      <div class="text-center mb-16">
+        <h3 class="text-2xl md:text-3xl font-serif font-light tracking-[0.2em] text-stone-900 uppercase">Experience & Background</h3>
+      </div>
+
+      <!-- Unified List -->
+      <div class="max-w-5xl mx-auto space-y-6 lg:space-y-8">
+        
+        <!-- Item 1: PROVEN RESULTS -->
+        <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
+            <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">PROVEN RESULTS</h4>
+            <div class="text-[#bfa75d] mb-6 flex items-center justify-center h-12">
+              <i data-lucide="trending-up" class="w-12 h-12" stroke-width="1.2"></i>
+            </div>
+            <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">売上に直結するスタイリング実績</p>
+          </div>
+          <div class="md:w-7/12 lg:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-stone-600 leading-[2.4] font-light tracking-[0.1em] text-base md:text-lg">
+              大手ファッション企業にてスタイリストとして活動。<br>
+              売上に直結するスタイリング提案を現場で経験し、月間ミリオン売上の継続、数億単位の売上に貢献。
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: VMD EXPERIENCE -->
+        <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
+            <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">VMD EXPERIENCE</h4>
+            <div class="text-[#bfa75d] mb-6 flex items-center justify-center h-12">
+              <i data-lucide="shirt" class="w-12 h-12" stroke-width="1.2"></i>
+            </div>
+            <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">売れる見せ方の実務経験</p>
+          </div>
+          <div class="md:w-7/12 lg:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-stone-600 leading-[2.4] font-light tracking-[0.1em] text-base md:text-lg">
+              メンズ・レディース・キッズの店舗スタイリングを担当。<br>
+              売れる見せ方やコーディネート構成、<br>視覚的な戦略設計を実務として習得。
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: TECHNICAL KNOWLEDGE -->
+        <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
+            <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">TECHNICAL KNOWLEDGE</h4>
+            <div class="text-[#bfa75d] mb-6 flex items-center justify-center h-12">
+              <i data-lucide="layers" class="w-12 h-12" stroke-width="1.2"></i>
+            </div>
+            <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">素材・構造まで理解した提案</p>
+          </div>
+          <div class="md:w-7/12 lg:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-stone-600 leading-[2.4] font-light tracking-[0.1em] text-base md:text-lg">
+              ファッション専門学校にて、デザイン・パターン・縫製・マーケティングを修得。<br>
+              素材や構造、シルエットまで理解した提案が可能。
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4: PERSONAL STYLING -->
+        <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
+            <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">PERSONAL STYLING</h4>
+            <div class="text-[#bfa75d] mb-6 flex items-center justify-center h-12">
+              <i data-lucide="user" class="w-12 h-12" stroke-width="1.2"></i>
+            </div>
+            <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">個々に合わせた似合わせ提案</p>
+          </div>
+          <div class="md:w-7/12 lg:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-stone-600 leading-[2.4] font-light tracking-[0.1em] text-base md:text-lg">
+              肌の色・体型・雰囲気に合わせた似合わせ提案。外見を“印象戦略”として設計するスタイリング。
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 5: CLIENT EXPERIENCE -->
+        <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
+            <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">CLIENT EXPERIENCE</h4>
+            <div class="text-[#bfa75d] mb-6 flex items-center justify-center h-12">
+              <i data-lucide="handshake" class="w-12 h-12" stroke-width="1.2"></i>
+            </div>
+            <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">丁寧で継続的な対応力</p>
+          </div>
+          <div class="md:w-7/12 lg:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-stone-600 leading-[2.4] font-light tracking-[0.1em] text-base md:text-lg">
+              CSリーダーとして顧客対応およびスタッフ育成を担当。<br>
+              丁寧で寄り添った対応により、継続的な信頼関係の構築を重視。
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 6: 20 YEARS IN FASHION -->
+        <div class="flex flex-col md:flex-row bg-white border-[0.5px] border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="md:w-5/12 lg:w-1/3 bg-stone-50 p-8 md:p-10 flex flex-col items-center justify-center text-center md:border-r-[0.5px] border-stone-200 shrink-0">
+            <h4 class="text-[13px] tracking-[0.15em] font-serif uppercase text-stone-800 mb-6 font-bold">20 YEARS IN FASHION</h4>
+            <div data-grad-text="true" class="mb-5 flex items-baseline justify-center h-16" style="background: linear-gradient(to bottom, #d4af37, #b6892b, #7a5c1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+              <span class="text-7xl font-serif tracking-tighter leading-none">20</span>
+              <span class="text-base ml-1 font-serif font-bold">年</span>
+            </div>
+            <p class="text-xs md:text-[13px] tracking-[0.1em] text-stone-700 font-medium">約20年の業界経験</p>
+          </div>
+          <div class="md:w-7/12 lg:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+            <p class="text-stone-600 leading-[2.4] font-light tracking-[0.1em] text-base md:text-lg">
+              約20年にわたりファッション業界に従事。<br>
+              トレンドだけでなく本質を捉えた、<br>長期的なスタイリング提案が可能。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Message Section -->
+  <section class="bg-white text-center relative z-10">
+    <div class="h-64 lg:h-96 w-full"></div>
+    <div class="h-32 lg:h-48 w-full"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <div class="text-base md:text-lg font-serif font-light tracking-[0.15em] text-center text-stone-800 mb-20 leading-[2.4]" style="text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);">
+        <p class="mb-12">
+          装いは、印象をつくるもの
+        </p>
+        <p class="mb-12">
+          似合うを大切にしながら、その先の“格”まで整える
+        </p>
+        <p>
+          あなたらしく、整った状態へ
+        </p>
+      </div>
+      
+      <div class="w-full max-w-lg mx-auto h-[1px] bg-[#bfa75d] opacity-70 mb-12"></div>
+      
+      <p data-grad-text="true" class="text-sm md:text-base font-serif tracking-[0.15em] mb-20" style="background: linear-gradient(to right, #c5a059, #a37c35, #8a6c28); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Private Styling Service
+      </p>
+    </div>
+    
+    <div class="h-32 lg:h-48 w-full"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-stone-400 py-24 border-t-[0.5px] border-stone-200 text-sm tracking-[0.3em] uppercase relative z-10 text-left">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center text-left">
+      <div class="mb-12 md:mb-0 text-center md:text-left text-left">
+        <span class="font-serif text-3xl text-stone-900 block mb-4 tracking-[0.3em] uppercase text-left">Style Archive</span>
+        <span class="font-light text-xs tracking-[0.2em] text-left">Executive Mens Personal Styling</span>
+      </div>
+      <div class="flex space-x-12 text-center md:text-left text-left">
+        <a href="#" class="hover:text-stone-900 transition-colors duration-500 border-b-[0.5px] border-transparent hover:border-stone-900 pb-1 font-bold text-left">Legal Notice</a>
+        <a href="#" class="hover:text-stone-900 transition-colors duration-500 border-b-[0.5px] border-transparent hover:border-stone-900 pb-1 font-bold text-left">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-20 text-center md:text-left pt-8 text-left">
+      <p class="font-light tracking-[0.2em] text-xs text-left">&copy; 2026 STYLE ARCHIVE. REFERRAL ONLY SERVICE.</p>
+    </div>
+  </footer>
+
+  <!-- PDF Download Button (画面右下に固定) -->
+  <button id="pdf-btn" onclick="downloadPDF()" class="fixed bottom-8 right-8 bg-stone-900/95 backdrop-blur-md text-white px-8 py-5 shadow-2xl z-50 flex items-center font-serif text-sm tracking-[0.2em] transition-all hover:scale-105 hover:bg-[#bfa75d] border-[0.5px] border-stone-700/50 rounded-none">
+    <i data-lucide="download" class="w-5 h-5 mr-4"></i> このデザインでPDF保存
+  </button>
+
+  <script>
+    lucide.createIcons();
+
+    function downloadPDF() {
+      const btn = document.getElementById('pdf-btn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 mr-4 animate-spin"></i> 高画質PDFを作成中...';
+      lucide.createIcons();
+      
+      // 印刷したくない要素を隠す
+      const nav = document.querySelector('nav');
+      nav.style.display = 'none';
+      btn.style.display = 'none';
+
+      // エラーの原因になるグラデーションテキストを一時的に単色にする
+      const gradElements = document.querySelectorAll('[data-grad-text="true"]');
+      const originalStyles = [];
+      gradElements.forEach((el, i) => {
+        originalStyles[i] = el.getAttribute('style');
+        el.setAttribute('style', 'color: #bfa75d !important; background: none !important; -webkit-text-fill-color: #bfa75d !important; padding-bottom: 0.1em;');
+      });
+
+      const element = document.body;
+      const width = element.scrollWidth;
+      const height = element.scrollHeight;
+
+      const opt = {
+        margin:       0,
+        filename:     'Style_Archive_ServiceGuide.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { 
+          scale: 2, 
+          useCORS: true, 
+          letterRendering: true,
+          logging: false,
+          scrollY: 0
+        },
+        jsPDF:        { unit: 'px', format: [width, height], orientation: 'portrait' }
+      };
+
+      // 画面のトップにスクロールしてからPDF生成（位置ズレ防止）
+      window.scrollTo(0, 0);
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        // PDF生成が終わったら元の状態に戻す
+        nav.style.display = 'block';
+        btn.style.display = 'flex';
+        btn.innerHTML = originalText;
+        lucide.createIcons();
+        gradElements.forEach((el, i) => {
+          el.setAttribute('style', originalStyles[i]);
+        });
+      }).catch(err => {
+        console.error('PDF生成エラー:', err);
+        alert('PDFの生成に失敗しました。');
+        nav.style.display = 'block';
+        btn.style.display = 'flex';
+        btn.innerHTML = originalText;
+        lucide.createIcons();
+        gradElements.forEach((el, i) => {
+          el.setAttribute('style', originalStyles[i]);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
