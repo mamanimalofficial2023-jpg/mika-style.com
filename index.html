@@ -6,8 +6,6 @@
   <title>Style Archive | Executive Personal Styling</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- 直接PDFを生成・ダウンロードするためのライブラリ -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +13,34 @@
   <style>
     body { font-family: sans-serif; }
     .font-serif { font-family: 'Noto Serif JP', serif; }
+    
+    /* --- 印刷設定 --- */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0; /* ブラウザが勝手に入れるヘッダー(日付など)を消す */
+      }
+      html, body {
+        width: 100%;
+        height: auto !important;
+        overflow: visible !important;
+        /* 背景色やグラフィックを強制的に出力させる */
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: #ffffff !important;
+      }
+      /* 固定ナビゲーションや不要な要素は印刷時に消す */
+      nav, .no-print {
+        display: none !important;
+      }
+      /* 背景の縦ラインの位置ズレを防ぐ */
+      .fixed { position: absolute !important; }
+      /* 各セクションがページの途中で不自然に切れないようにする */
+      section {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+    }
   </style>
 </head>
 <body class="min-h-screen bg-white font-sans text-stone-800 selection:bg-stone-200 selection:text-stone-900 relative">
@@ -542,75 +568,8 @@
     </div>
   </footer>
 
-  <!-- PDF Download Button (画面右下に固定) -->
-  <button id="pdf-btn" onclick="downloadPDF()" class="fixed bottom-8 right-8 bg-stone-900/95 backdrop-blur-md text-white px-8 py-5 shadow-2xl z-50 flex items-center font-serif text-sm tracking-[0.2em] transition-all hover:scale-105 hover:bg-[#bfa75d] border-[0.5px] border-stone-700/50 rounded-none">
-    <i data-lucide="download" class="w-5 h-5 mr-4"></i> このデザインでPDF保存
-  </button>
-
   <script>
     lucide.createIcons();
-
-    function downloadPDF() {
-      const btn = document.getElementById('pdf-btn');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 mr-4 animate-spin"></i> 高画質PDFを作成中...';
-      lucide.createIcons();
-      
-      // 印刷したくない要素を隠す
-      const nav = document.querySelector('nav');
-      nav.style.display = 'none';
-      btn.style.display = 'none';
-
-      // エラーの原因になるグラデーションテキストを一時的に単色にする
-      const gradElements = document.querySelectorAll('[data-grad-text="true"]');
-      const originalStyles = [];
-      gradElements.forEach((el, i) => {
-        originalStyles[i] = el.getAttribute('style');
-        el.setAttribute('style', 'color: #bfa75d !important; background: none !important; -webkit-text-fill-color: #bfa75d !important; padding-bottom: 0.1em;');
-      });
-
-      const element = document.body;
-      const width = element.scrollWidth;
-      const height = element.scrollHeight;
-
-      const opt = {
-        margin:       0,
-        filename:     'Style_Archive_ServiceGuide.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { 
-          scale: 2, 
-          useCORS: true, 
-          letterRendering: true,
-          logging: false,
-          scrollY: 0
-        },
-        jsPDF:        { unit: 'px', format: [width, height], orientation: 'portrait' }
-      };
-
-      // 画面のトップにスクロールしてからPDF生成（位置ズレ防止）
-      window.scrollTo(0, 0);
-
-      html2pdf().set(opt).from(element).save().then(() => {
-        // PDF生成が終わったら元の状態に戻す
-        nav.style.display = 'block';
-        btn.style.display = 'flex';
-        btn.innerHTML = originalText;
-        lucide.createIcons();
-        gradElements.forEach((el, i) => {
-          el.setAttribute('style', originalStyles[i]);
-        });
-      }).catch(err => {
-        console.error('PDF生成エラー:', err);
-        alert('PDFの生成に失敗しました。');
-        nav.style.display = 'block';
-        btn.style.display = 'flex';
-        btn.innerHTML = originalText;
-        lucide.createIcons();
-        gradElements.forEach((el, i) => {
-          el.setAttribute('style', originalStyles[i]);
-        });
-      });
-    }
   </script>
 </body>
 </html>
