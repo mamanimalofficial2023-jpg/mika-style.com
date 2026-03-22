@@ -305,7 +305,8 @@
 
       <!-- STEP 4. Annual VIP -->
       <div class="relative max-w-5xl mx-auto lg:pl-32 lg:pr-8 mb-32">
-        <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light text-stone-200/70 z-0 pointer-events-none select-none hidden md:block">04</div>
+        <!-- 背景の04をゴールドグラデーションにして特別感を演出 -->
+        <div class="absolute -top-16 left-8 text-[14rem] font-serif font-light z-0 pointer-events-none select-none hidden md:block" style="background: linear-gradient(to bottom, #bfa75d, #e8dcb3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; opacity: 0.2;">04</div>
         <div class="relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
           <div class="lg:w-1/2 w-full lg:pr-4">
             
@@ -314,7 +315,8 @@
                 <span class="text-lg tracking-[0.2em] mr-4 font-bold">STEP 4.</span>
                 <span class="text-xl md:text-2xl tracking-[0.2em] leading-snug">PRIVATE SUPPORT</span>
               </div>
-              <span class="text-xs tracking-widest px-3 py-1 border-[0.5px] border-[#bfa75d]">Executive Exclusive</span>
+              <!-- タグを黒×金にしてVIP感を -->
+              <span class="text-xs tracking-widest px-3 py-1 bg-stone-900 text-[#bfa75d] border-[0.5px] border-stone-900 font-bold">Executive Exclusive</span>
             </div>
             
             <p class="text-3xl md:text-4xl font-serif tracking-[0.1em] mb-14 text-stone-900 font-light leading-[1.8]">
@@ -323,55 +325,57 @@
             </p>
             
             <div class="w-12 h-[0.5px] bg-[#bfa75d] mb-12"></div>
-          </div>
-          
-          <div class="lg:w-1/2 w-full mt-12 lg:mt-0">
-            <div class="bg-stone-900/95 backdrop-blur-md border-[0.5px] border-stone-700 p-10 lg:p-12 shadow-2xl relative overflow-hidden text-white">
-              <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none overflow-hidden text-center">
-                <div class="absolute top-0 right-0 w-0 h-0 border-t-[90px] border-t-[#bfa75d] border-l-[90px] border-l-transparent"></div>
-                <span class="absolute top-[18px] right-[4px] text-white text-[10px] font-bold tracking-[0.15em] transform rotate-45 block w-14 text-center">VIP</span>
-              </div>
+            
+            <p class="text-xl md:text-2xl text-stone-900 tracking-widest mb-6 font-serif font-bold">年間契約｜専属スタイリング</p>
+            
+            <p class="text-stone-500 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
+              装いに関する意思決定を、<br>
+              継続的に支えるパートナーとして
+            </p>
 
-              <p class="text-xl md:text-2xl text-white tracking-widest mb-6 font-serif font-bold">年間契約｜専属スタイリング</p>
-              
-              <p class="text-stone-300 text-lg leading-[2.4] font-light tracking-[0.1em] mb-12">
-                装いに関する意思決定を、<br>
-                継続的に支えるパートナーとして
-              </p>
+            <ul class="space-y-6 text-base lg:text-lg text-stone-600 font-light tracking-[0.1em]">
+              <li>・ワードローブ戦略設計・管理</li>
+              <li>・シーン別スタイリング設計</li>
+              <li>・ショッピングアテンド</li>
+              <li>・印象ブランディングの継続的最適化</li>
+            </ul>
+            
+            <div class="my-8 flex justify-start">
+              <div class="flex items-center justify-center w-8 h-8 rounded-full border-[0.5px] border-[#bfa75d] text-[#bfa75d] font-light">+</div>
+            </div>
+            
+            <ul class="space-y-6 text-base lg:text-lg text-[#bfa75d] font-light tracking-[0.1em] mb-16">
+              <li>・専用LINEコンシェルジュ</li>
+              <li>・デジタルワードローブ管理</li>
+            </ul>
 
-              <div class="text-right border-b-[0.5px] border-stone-700 pb-8 mb-8">
-                <p class="text-3xl md:text-4xl font-serif text-white tracking-widest">
-                  ¥880,000 <span class="text-base font-sans text-stone-400 tracking-normal ml-2 font-light">/ 年</span>
+            <!-- 料金部分を黒背景のエレガントなVIPカードに -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-stone-900 p-8 border-[0.5px] border-[#bfa75d]/50 shadow-xl relative">
+              <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#c5a059] to-[#8a6c28]"></div>
+              <span class="text-[#bfa75d] text-sm font-serif uppercase tracking-widest font-bold mb-4 sm:mb-0">ANNUAL VIP</span>
+              <div class="text-left sm:text-right">
+                <p class="text-2xl md:text-3xl font-serif text-white tracking-widest">
+                  ¥880,000 <span class="text-sm font-sans text-stone-400 tracking-normal ml-2 font-light">/ 年</span>
                 </p>
-                <p class="text-stone-400 text-sm tracking-widest mt-3 font-light">（月額換算：約¥73,000）</p>
-              </div>
-
-              <ul class="space-y-6 text-base lg:text-lg text-stone-200 font-light tracking-[0.1em]">
-                <li>・ワードローブ戦略設計・管理</li>
-                <li>・シーン別スタイリング設計</li>
-                <li>・ショッピングアテンド</li>
-                <li>・印象ブランディングの継続的最適化</li>
-              </ul>
-              
-              <div class="my-8 flex justify-center">
-                <div class="flex items-center justify-center w-8 h-8 rounded-full border-[0.5px] border-[#bfa75d] text-[#bfa75d] font-light">+</div>
-              </div>
-              
-              <ul class="space-y-6 text-base lg:text-lg text-[#bfa75d] font-light tracking-[0.1em] mb-12">
-                <li>・専用LINEコンシェルジュ</li>
-                <li>・デジタルワードローブ管理</li>
-              </ul>
-              
-              <!-- 追加されたRESULTSセクション -->
-              <div class="pt-10 border-t-[0.5px] border-stone-700">
-                <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-8 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-400 ml-2 font-normal">/ 得られる変化</span></h4>
-                <ul class="space-y-6 text-base lg:text-lg text-stone-200 font-light tracking-[0.1em]">
-                  <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの無駄がなくなる</span></li>
-                  <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>日々の選択がスムーズになる</span></li>
-                  <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが戦略的に機能する</span></li>
-                </ul>
+                <p class="text-stone-400 text-xs tracking-widest mt-2 font-light">（月額換算：約¥73,000）</p>
               </div>
             </div>
+          </div>
+          
+          <!-- 右側のRESULTSはSTEP1〜3と同じ白背景に -->
+          <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white p-12 lg:p-16 border-[0.5px] border-stone-200 shadow-lg relative overflow-hidden">
+            <!-- 白背景に映える黒×金のリボン -->
+            <div class="absolute top-0 right-0 w-28 h-28 pointer-events-none overflow-hidden text-center">
+              <div class="absolute top-0 right-0 w-0 h-0 border-t-[112px] border-t-stone-900 border-l-[112px] border-l-transparent"></div>
+              <span class="absolute top-[24px] right-[2px] text-[#bfa75d] text-[11px] font-bold tracking-[0.15em] transform rotate-45 block w-20 text-center">VIP</span>
+            </div>
+
+            <h4 class="text-xl md:text-2xl tracking-[0.15em] text-[#bfa75d] mb-12 uppercase font-serif font-bold">RESULTS <span class="text-sm font-sans tracking-widest text-stone-500 ml-2 font-normal">/ 得られる変化</span></h4>
+            <ul class="space-y-8 text-base lg:text-lg text-stone-700 font-light tracking-[0.1em]">
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>装いの無駄がなくなる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>日々の選択がスムーズになる</span></li>
+              <li class="flex items-start"><i data-lucide="check" class="w-6 h-6 text-[#bfa75d] mr-4 shrink-0 mt-0.5"></i> <span>クローゼットが戦略的に機能する</span></li>
+            </ul>
           </div>
         </div>
       </div>
